@@ -3,6 +3,21 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>nullstats</ToolCommandName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageOutputPath>./../nupkg</PackageOutputPath>
+    <PackageId>dotMorten.NullabilityStats</PackageId>
+    <AssemblyName>nullstats</AssemblyName>
+    <Authors>Morten Nielsen</Authors>
+    <PackageProjectUrl>https://github.com/dotMorten/NullabilityStats</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotMorten/NullabilityStats</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Commandline tool that gives an estimate per-folder how many lines of code hasn't been nullability annotated.
+Assumes the entire project has Nullability turned on, and counts files where nullability support has been turned off per-file.
+Does a best guess estimate on lines of code (ignoring usings, namespace, `{}`, empty lines and comments), and gives stats per-folder to be able to measure progress on adding nullability annotations. Commandline + CSV output.</Description>
+    <Copyright>Copyright © 2020 Morten Nielsen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
